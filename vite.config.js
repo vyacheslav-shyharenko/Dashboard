@@ -1,6 +1,7 @@
 // vite.config.js
 import { defineConfig } from "vite";
 import path from "path";
+import { globSync } from "glob";
 import FullReload from "vite-plugin-full-reload";
 import viteImagemin from "vite-plugin-imagemin";
 
@@ -20,13 +21,19 @@ export default defineConfig(({ command }) => ({
     emptyOutDir: true,
     sourcemap: command === "serve",
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, "src/index.html"),
-      },
+      input: Object.fromEntries(
+        globSync(["./src/*.html", "./src/pages/**/*.html"]).map((file) => [
+          path
+            .relative(
+              path.resolve(__dirname, "src"),
+              file.slice(0, file.length - path.extname(file).length)
+            )
+            .replace(/\\/g, "/"),
+          path.resolve(__dirname, file),
+        ])
+      ),
       output: {
-        assetFileNames: "assets/[name]-[hash][extname]",
-        chunkFileNames: "assets/[name]-[hash].js",
-        entryFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name].[ext]",
       },
     },
   },
