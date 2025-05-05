@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "sass:list";
+
+@use "./variables" as var;
+@use "./functions" as fn;
+
+// Media
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if not map.has-key(var.$braikepoints, $bp) {
+    @error "⚠️ Breakpoint '#{$bp}' not found in $braikepoints map.";
+  }
+
+  $width: map-get(var.$braikepoints, $bp);
+
+  @if $type == max {
+    $width: $width - 0.02px;
+  }
+
+  @if $is-retina {
+    @media only screen and (#{$type}-width: $width) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (#{$type}-width: $width) and (min-resolution: 192dpi) {
+      @content;
+    }
+  } @else {
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+// Frame
+@mixin frame($width, $height: $width, $is-circle: false) {
+  width: $width;
+  height: $height;
+
+  @if $is-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+// Sroll-bar
+@mixin scroll-bar($size: 6px) {
+  // Вертикальний + горизонтальний скролбар
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  // Трек (фон за повзунком)
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: lightgray;
+    }
+  }
+  &:hover::-webkit-scrollbar-track {
+    background-color: lightgray;
+  }
+
+  // Повзунок прокрутки
+  &::-webkit-scrollbar-thumb {
+    background-color: fn.get-color("light-secondary");
+    border-radius: 100px;
+
+    &:hover {
+      background-color: fn.get-color("accent-primary");
+    }
+  }
+
+  // Кнопки на кінцях (верх, низ)
+  &::-webkit-scrollbar-button {
+    width: $size;
+    height: $size;
+  }
+}
+
+// Hover-efects
+@mixin ease($ease, $properties...) {
+  @if not map.has-key(var.$easings, $ease) {
+    @warn "⚠️ Easing `#{$ease}` is not defined in $easings map.";
+  }
+
+  $value: map.get(var.$easings, $ease);
+
+  @if list.length($properties) > 0 {
+    transition-property: $properties;
+    transition-duration: list.nth($value, 1);
+    transition-timing-function: list.nth($value, 2);
+  } @else {
+    transition: all #{list.nth($value, 1)} #{list.nth($value, 2)};
+  }
+}
+
+// Fonts
+@mixin font-face-family($name, $map, $style: normal) {
+  @each $label, $weight in $map {
+    @font-face {
+      font-family: #{$name};
+      src: url("../../fonts/#{$name}-#{$label}.woff2") format("woff2"),
+        url("../../fonts/#{$name}-#{$label}.woff") format("woff");
+      font-weight: $weight;
+      font-style: $style;
+      font-display: swap;
+    }
+  }
+}

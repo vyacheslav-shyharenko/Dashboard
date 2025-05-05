@@ -1,0 +1,4 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mx;
+
+@include mx.font-face-family("Montserrat", var.$montserrat-fonts);
