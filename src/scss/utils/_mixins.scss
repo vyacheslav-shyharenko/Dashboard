@@ -103,8 +103,8 @@
   @each $label, $weight in $map {
     @font-face {
       font-family: #{$name};
-      src: url("../../fonts/#{$name}-#{$label}.woff2") format("woff2"),
-        url("../../fonts/#{$name}-#{$label}.woff") format("woff");
+      src: url("/fonts/#{$name}-#{$label}.woff2") format("woff2"),
+        url("/fonts/#{$name}-#{$label}.woff") format("woff");
       font-weight: $weight;
       font-style: $style;
       font-display: swap;
