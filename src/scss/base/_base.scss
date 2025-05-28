@@ -4,6 +4,8 @@ $base-font-family: u.get(font-family, base);
 $base-font-size: u.get(font-size, base);
 $base-font-weight: u.get(font-weight, regular);
 $base-line-height: u.get(line-height, base);
+$base-background-color: u.get(color, dark-primary);
+$base-text-color: u.get(color, light-primary);
 
 // Встановлюємо базовий розмір для rem
 html {
@@ -16,6 +18,16 @@ body {
   font-family: $base-font-family, sans-serif;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
+  color: $base-text-color;
+  background-color: $base-background-color;
+}
+
+button {
+  font-family: inherit;
   color: currentColor;
-  background-color: transparent;
+  cursor: pointer;
+}
+
+summary {
+  list-style-type: none;
 }
