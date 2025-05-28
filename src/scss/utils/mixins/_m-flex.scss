@@ -1,0 +1,10 @@
+// Міксин для керування властивостями флекс контейнера
+@mixin flex-center($is-column: false) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $is-column {
+    flex-direction: column;
+  }
+}

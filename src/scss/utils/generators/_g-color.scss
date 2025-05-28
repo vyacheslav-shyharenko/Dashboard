@@ -1,0 +1,29 @@
+@use "../functions/f-get-token" as fn;
+
+$colors: fn.get(color);
+
+// :root — CSS змінні
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+}
+
+// Утилітні класи
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+
+  .color-#{$name} {
+    color: $value;
+  }
+
+  .border-#{$name} {
+    border-color: $value;
+  }
+
+  .fill-#{$name} svg {
+    fill: $value;
+  }
+}

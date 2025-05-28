@@ -1,0 +1,28 @@
+@use "sass:map";
+
+@use "../tokens/t-token" as t;
+@use "../functions/f-get-token" as fn;
+
+$breakpoints: fn.get(breakpoint);
+
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if map.has-key($breakpoints, $bp) {
+    $width: map.get($breakpoints, $bp);
+
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: #{$width}) {
+      @if $is-retina {
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+}

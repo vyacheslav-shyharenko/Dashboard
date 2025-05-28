@@ -1,0 +1,6 @@
+@use "../utils" as u;
+
+$typography-font-weight: u.get(font-weight);
+$typography-font-family: u.get(font-family, base);
+
+@include u.font-face-family($typography-font-family, $typography-font-weight);

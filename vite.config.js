@@ -1,9 +1,9 @@
 // vite.config.js
 import { defineConfig } from "vite";
 import path from "path";
-import { globSync } from "glob";
 import FullReload from "vite-plugin-full-reload";
 import viteImagemin from "vite-plugin-imagemin";
+import purgeCss from "vite-plugin-purgecss";
 
 export default defineConfig(({ command }) => ({
   root: "src",
@@ -21,19 +21,13 @@ export default defineConfig(({ command }) => ({
     emptyOutDir: true,
     sourcemap: command === "serve",
     rollupOptions: {
-      input: Object.fromEntries(
-        globSync(["./src/*.html", "./src/pages/**/*.html"]).map((file) => [
-          path
-            .relative(
-              path.resolve(__dirname, "src"),
-              file.slice(0, file.length - path.extname(file).length)
-            )
-            .replace(/\\/g, "/"),
-          path.resolve(__dirname, file),
-        ])
-      ),
+      input: {
+        main: path.resolve(__dirname, "src/index.html"),
+      },
       output: {
-        assetFileNames: "assets/[name].[ext]",
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
   },
@@ -50,6 +44,10 @@ export default defineConfig(({ command }) => ({
           { name: "cleanupIDs", active: false },
         ],
       },
+    }),
+    purgeCss({
+      content: ["./src/**/*.{html,js,ts}", "./src/index.html"],
+      safelist: [/^observer-delay-/, "visible"],
     }),
   ],
 }));
