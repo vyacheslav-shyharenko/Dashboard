@@ -1,97 +1,19 @@
 :root {
-  --primary: #ebd0d0;
-  --secondary: #31d0aa;
-  --accent: #404bbf;
-  --base: #434455;
-  --muted: #8e8f99;
   --light: #ffffff;
-  --body: #ffffff;
-  --section: #f4f4fd;
-  --overlay: rgba(46, 47, 66, 0.8);
-  --border-base: #e7e9fc;
-  --success: #31d0aa;
-  --danger: #e74c3c;
-  --warning: #f39c12;
-}
-
-.bg-primary {
-  background-color: #ebd0d0;
-}
-
-.color-primary {
-  color: #ebd0d0;
-}
-
-.border-primary {
-  border-color: #ebd0d0;
-}
-
-.fill-primary svg {
-  fill: #ebd0d0;
-}
-
-.bg-secondary {
-  background-color: #31d0aa;
-}
-
-.color-secondary {
-  color: #31d0aa;
-}
-
-.border-secondary {
-  border-color: #31d0aa;
-}
-
-.fill-secondary svg {
-  fill: #31d0aa;
-}
-
-.bg-accent {
-  background-color: #404bbf;
-}
-
-.color-accent {
-  color: #404bbf;
-}
-
-.border-accent {
-  border-color: #404bbf;
-}
-
-.fill-accent svg {
-  fill: #404bbf;
-}
-
-.bg-base {
-  background-color: #434455;
-}
-
-.color-base {
-  color: #434455;
-}
-
-.border-base {
-  border-color: #434455;
-}
-
-.fill-base svg {
-  fill: #434455;
-}
-
-.bg-muted {
-  background-color: #8e8f99;
-}
-
-.color-muted {
-  color: #8e8f99;
-}
-
-.border-muted {
-  border-color: #8e8f99;
-}
-
-.fill-muted svg {
-  fill: #8e8f99;
+  --light-primary: #fafafb;
+  --light-secondary: #b5b5be;
+  --light-tertiary: #92929d;
+  --dark: #000000;
+  --dark-primary: #13131a;
+  --dark-secondary: #1c1c24;
+  --dark-tertiary: #292932;
+  --accent-primary: #f07f2e;
+  --accent-secondary: #f15c27;
+  --accent-tertiary: #d14a00;
+  --danger: #fc5a5a;
+  --warning: #a461d8;
+  --success: #82c43c;
+  --info: #4e75ff;
 }
 
 .bg-light {
@@ -110,116 +32,228 @@
   fill: #ffffff;
 }
 
-.bg-body {
-  background-color: #ffffff;
+.bg-light-primary {
+  background-color: #fafafb;
 }
 
-.color-body {
-  color: #ffffff;
+.color-light-primary {
+  color: #fafafb;
 }
 
-.border-body {
-  border-color: #ffffff;
+.border-light-primary {
+  border-color: #fafafb;
 }
 
-.fill-body svg {
-  fill: #ffffff;
+.fill-light-primary svg {
+  fill: #fafafb;
 }
 
-.bg-section {
-  background-color: #f4f4fd;
+.bg-light-secondary {
+  background-color: #b5b5be;
 }
 
-.color-section {
-  color: #f4f4fd;
+.color-light-secondary {
+  color: #b5b5be;
 }
 
-.border-section {
-  border-color: #f4f4fd;
+.border-light-secondary {
+  border-color: #b5b5be;
 }
 
-.fill-section svg {
-  fill: #f4f4fd;
+.fill-light-secondary svg {
+  fill: #b5b5be;
 }
 
-.bg-overlay {
-  background-color: rgba(46, 47, 66, 0.8);
+.bg-light-tertiary {
+  background-color: #92929d;
 }
 
-.color-overlay {
-  color: rgba(46, 47, 66, 0.8);
+.color-light-tertiary {
+  color: #92929d;
 }
 
-.border-overlay {
-  border-color: rgba(46, 47, 66, 0.8);
+.border-light-tertiary {
+  border-color: #92929d;
 }
 
-.fill-overlay svg {
-  fill: rgba(46, 47, 66, 0.8);
+.fill-light-tertiary svg {
+  fill: #92929d;
 }
 
-.bg-border-base {
-  background-color: #e7e9fc;
+.bg-dark {
+  background-color: #000000;
 }
 
-.color-border-base {
-  color: #e7e9fc;
+.color-dark {
+  color: #000000;
 }
 
-.border-border-base {
-  border-color: #e7e9fc;
+.border-dark {
+  border-color: #000000;
 }
 
-.fill-border-base svg {
-  fill: #e7e9fc;
+.fill-dark svg {
+  fill: #000000;
 }
 
-.bg-success {
-  background-color: #31d0aa;
+.bg-dark-primary {
+  background-color: #13131a;
 }
 
-.color-success {
-  color: #31d0aa;
+.color-dark-primary {
+  color: #13131a;
 }
 
-.border-success {
-  border-color: #31d0aa;
+.border-dark-primary {
+  border-color: #13131a;
 }
 
-.fill-success svg {
-  fill: #31d0aa;
+.fill-dark-primary svg {
+  fill: #13131a;
+}
+
+.bg-dark-secondary {
+  background-color: #1c1c24;
+}
+
+.color-dark-secondary {
+  color: #1c1c24;
+}
+
+.border-dark-secondary {
+  border-color: #1c1c24;
+}
+
+.fill-dark-secondary svg {
+  fill: #1c1c24;
+}
+
+.bg-dark-tertiary {
+  background-color: #292932;
+}
+
+.color-dark-tertiary {
+  color: #292932;
+}
+
+.border-dark-tertiary {
+  border-color: #292932;
+}
+
+.fill-dark-tertiary svg {
+  fill: #292932;
+}
+
+.bg-accent-primary {
+  background-color: #f07f2e;
+}
+
+.color-accent-primary {
+  color: #f07f2e;
+}
+
+.border-accent-primary {
+  border-color: #f07f2e;
+}
+
+.fill-accent-primary svg {
+  fill: #f07f2e;
+}
+
+.bg-accent-secondary {
+  background-color: #f15c27;
+}
+
+.color-accent-secondary {
+  color: #f15c27;
+}
+
+.border-accent-secondary {
+  border-color: #f15c27;
+}
+
+.fill-accent-secondary svg {
+  fill: #f15c27;
+}
+
+.bg-accent-tertiary {
+  background-color: #d14a00;
+}
+
+.color-accent-tertiary {
+  color: #d14a00;
+}
+
+.border-accent-tertiary {
+  border-color: #d14a00;
+}
+
+.fill-accent-tertiary svg {
+  fill: #d14a00;
 }
 
 .bg-danger {
-  background-color: #e74c3c;
+  background-color: #fc5a5a;
 }
 
 .color-danger {
-  color: #e74c3c;
+  color: #fc5a5a;
 }
 
 .border-danger {
-  border-color: #e74c3c;
+  border-color: #fc5a5a;
 }
 
 .fill-danger svg {
-  fill: #e74c3c;
+  fill: #fc5a5a;
 }
 
 .bg-warning {
-  background-color: #f39c12;
+  background-color: #a461d8;
 }
 
 .color-warning {
-  color: #f39c12;
+  color: #a461d8;
 }
 
 .border-warning {
-  border-color: #f39c12;
+  border-color: #a461d8;
 }
 
 .fill-warning svg {
-  fill: #f39c12;
+  fill: #a461d8;
+}
+
+.bg-success {
+  background-color: #82c43c;
+}
+
+.color-success {
+  color: #82c43c;
+}
+
+.border-success {
+  border-color: #82c43c;
+}
+
+.fill-success svg {
+  fill: #82c43c;
+}
+
+.bg-info {
+  background-color: #4e75ff;
+}
+
+.color-info {
+  color: #4e75ff;
+}
+
+.border-info {
+  border-color: #4e75ff;
+}
+
+.fill-info svg {
+  fill: #4e75ff;
 }
 
 .d-none {

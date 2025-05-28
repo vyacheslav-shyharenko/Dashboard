@@ -1,25 +1,20 @@
 $COLORS: (
-  // BASE
-  primary: #ebd0d0,
-  secondary: #31d0aa,
-  accent: #404bbf,
-
-  // TEXT
-  base: #434455,
-  muted: #8e8f99,
   light: #ffffff,
+  light-primary: #fafafb,
+  light-secondary: #b5b5be,
+  light-tertiary: #92929d,
 
-  // BACKGROUND
-  body: #ffffff,
-  section: #f4f4fd,
-  overlay: rgba(46, 47, 66, 0.8),
-  // BORDER
-  border-base: #e7e9fc,
+  dark: #000000,
+  dark-primary: #13131a,
+  dark-secondary: #1c1c24,
+  dark-tertiary: #292932,
 
-  // STATE
-  success: #31d0aa,
-  danger: #e74c3c,
-  warning: #f39c12,
+  accent-primary: #f07f2e,
+  accent-secondary: #f15c27,
+  accent-tertiary: #d14a00,
 
-  // OTHER
+  danger: #fc5a5a,
+  warning: #a461d8,
+  success: #82c43c,
+  info: #4e75ff,
 );
