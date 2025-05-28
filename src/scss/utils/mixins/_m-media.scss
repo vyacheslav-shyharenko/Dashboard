@@ -5,7 +5,7 @@
 
 $breakpoints: fn.get(breakpoint);
 
-@mixin mq($bp: sm, $type: min, $is-retina: false) {
+@mixin respond-to($bp: sm, $type: min, $is-retina: false) {
   @if map.has-key($breakpoints, $bp) {
     $width: map.get($breakpoints, $bp);
 
