@@ -1,9 +1,7 @@
 @use "../utils" as u;
 
 $layout-min-width: u.get(breakpoint, mobile);
-$layout-font-size: u.get(font-size, base);
+
 .layout {
   min-width: $layout-min-width;
-
-  @include u.clamp(320px, 1400px, 16px, 14px);
 }

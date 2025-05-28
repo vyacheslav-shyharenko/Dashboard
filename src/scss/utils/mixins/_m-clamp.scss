@@ -11,10 +11,12 @@
   $sign: if($slope >= 0, "+", "-");
   $abs-slope: math.abs($slope);
 
-  $preferred: unquote(
-    "calc(#{$fs-start} #{$sign} #{$abs-slope} * ((100vw - #{$min-w}) / #{$range}))"
+  // ✅ Правильно сформована формула без unquote
+  $preferred: calc(
+    #{$fs-start} #{$sign} #{$abs-slope} * ((100vw - #{$min-w}) / #{$range})
   );
 
+  // ✅ Автоматично розставляє мінімум і максимум правильно
   $min-fs: if($fs-start < $fs-end, $fs-start, $fs-end);
   $max-fs: if($fs-start > $fs-end, $fs-start, $fs-end);
 
