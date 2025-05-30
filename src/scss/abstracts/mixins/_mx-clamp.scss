@@ -1,0 +1,23 @@
+@use "sass:math";
+
+@mixin clamp($min-w, $max-w, $fs-start, $fs-end) {
+  $min-w-val: math.div($min-w, 1px);
+  $max-w-val: math.div($max-w, 1px);
+  $fs-start-val: math.div($fs-start, 1px);
+  $fs-end-val: math.div($fs-end, 1px);
+
+  $slope: $fs-end-val - $fs-start-val;
+  $range: $max-w-val - $min-w-val;
+  $sign: if($slope >= 0, "+", "-");
+  $abs-slope: math.abs($slope);
+
+  $preferred: calc(
+    #{$fs-start} #{$sign} #{$abs-slope} * ((100vw - #{$min-w}) / #{$range})
+  );
+
+  // ✅ Автоматично розставляє мінімум і максимум правильно
+  $min-fs: if($fs-start < $fs-end, $fs-start, $fs-end);
+  $max-fs: if($fs-start > $fs-end, $fs-start, $fs-end);
+
+  font-size: clamp(#{$min-fs}, #{$preferred}, #{$max-fs});
+}

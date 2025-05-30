@@ -1,0 +1,9 @@
+@use "../functions" as fn;
+
+$font-sizes: fn.get-token(fontSize);
+
+@each $size, $value in $font-sizes {
+  .fs-#{$size} {
+    font-size: fn.rem($value);
+  }
+}

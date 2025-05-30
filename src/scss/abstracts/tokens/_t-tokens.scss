@@ -1,0 +1,26 @@
+@use "../maps" as m;
+@use "../maps-alias" as ma;
+
+$TOKENS: (
+  breakpoint: m.$BREAKPOINTS,
+  color: m.$COLORS,
+  fontFamily: m.$FONT-FAMILIES,
+  fontSize: m.$FONT-SIZES,
+  fontWeight: m.$FONT-WEIGHTS,
+  lineHeight: m.$LINE-HEIGHTS,
+  radius: m.$BORDER-RADIUS,
+  spacing: m.$SPACING,
+  shadow: m.$SHADOW,
+);
+
+$ALIAS-TOKENS: (
+  // breakpoint: ma.$BREAKPOINTS-ALIASES,
+  color: ma.$ALIAS-COLORS,
+  // fontFamily: ma.$FONT-FAMILY-ALIASES,
+  // fontSize: ma.$FONT-SIZE-ALIASES,
+  // fontWeight: ma.$FONT-WEIGHT-ALIASES,
+  // lineHeight: ma.$LINE-HEIGHT-ALIASES,
+  // radius: ma.$RADIUS-ALIASES,
+  spacing: ma.$SPACING-ALIASES,
+  // shadow: ma.$SHADOW-ALIASES,
+);

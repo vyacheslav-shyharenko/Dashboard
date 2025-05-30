@@ -1,0 +1,43 @@
+@use "../functions/f-get-token" as gt;
+
+@use "../functions/f-units" as r;
+
+@use "../tokens/t-tokens" as t;
+
+:root {
+  /* === COLORS === */
+  @each $key, $value in gt.get-token(color) {
+    --color-#{$key}: #{$value};
+  }
+
+  /* === FONT SIZES === */
+  @each $key, $value in gt.get-token(fontSize) {
+    --font-size-#{$key}: #{r.rem($value)};
+  }
+
+  /* === FONT WEIGHTS === */
+  @each $key, $value in gt.get-token(fontWeight) {
+    --font-weight-#{$key}: #{$value};
+  }
+
+  /* === LINE HEIGHTS === */
+  @each $key, $value in gt.get-token(lineHeight) {
+    --line-height-#{$key}: #{$value};
+  }
+
+  /* === RADIUS === */
+  @each $key, $value in gt.get-token(radius) {
+    --radius-#{$key}: #{r.rem($value)};
+  }
+
+  /* === SPACINGS === */
+  @each $key, $value in gt.get-token(spacing) {
+    --spacing-#{$key}: #{r.rem($value)};
+  }
+
+  /* === FONTS-FAMILY === */
+
+  @each $key, $value in gt.get-token(fontFamily) {
+    --font-family-#{$key}: #{$value};
+  }
+}

@@ -1,0 +1,5 @@
+@use "../functions/f-get-token" as gt;
+
+$c-radius-sm: gt.get(radius, sm);
+$c-radius-md: gt.get(radius, md);
+$c-radius-lg: gt.get(radius, lg);

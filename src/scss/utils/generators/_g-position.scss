@@ -1,7 +1,0 @@
-// Властивість position
-$position-values: relative, absolute, fixed, sticky;
-@each $value in $position-values {
-  .p-#{$value} {
-    position: $value;
-  }
-}

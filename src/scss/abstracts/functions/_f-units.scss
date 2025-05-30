@@ -1,0 +1,24 @@
+@use "sass:math";
+@use "sass:meta";
+
+@use "../functions/f-get-token" as gt;
+
+@function remove-unit($value) {
+  @if meta.type-of($value) != "number" {
+    @error "#{$value} is not a number.";
+  }
+
+  @if not math.is-unitless($value) {
+    @return math.div($value, 1px);
+  }
+
+  @return $value;
+}
+
+@function rem($px-value, $baseFontSize: null) {
+  @if $baseFontSize == null {
+    $baseFontSize: gt.get-token(fontSize, base);
+  }
+
+  @return #{math.div(remove-unit($px-value), remove-unit($baseFontSize))}rem;
+}

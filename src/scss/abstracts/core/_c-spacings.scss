@@ -1,0 +1,14 @@
+@use "../functions/f-get-token" as gt;
+
+$c-spacing-none: gt.get(spacing, none);
+$c-spacing-xxs: gt.get(spacing, xxs);
+$c-spacing-xs: gt.get(spacing, xs);
+$c-spacing-sm: gt.get(spacing, sm);
+$c-spacing-md: gt.get(spacing, md);
+$c-spacing-lg: gt.get(spacing, lg);
+$c-spacing-xl: gt.get(spacing, xl);
+$c-spacing-xxl: gt.get(spacing, xxl);
+
+$c-spacing-section: gt.get(spacing, section);
+$c-spacing-container-min: gt.get(spacing, container-min);
+$c-spacing-container-max: gt.get(spacing, container-max);

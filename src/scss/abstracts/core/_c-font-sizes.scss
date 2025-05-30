@@ -1,0 +1,8 @@
+@use "../functions/f-get-token" as gt;
+
+$c-font-size-xs: gt.get(font-size, xs);
+$c-font-size-sm: gt.get(font-size, sm);
+$c-font-size-base: gt.get(font-size, base);
+$c-font-size-md: gt.get(font-size, md);
+$c-font-size-lg: gt.get(font-size, lg);
+$c-font-size-xl: gt.get(font-size, xl);

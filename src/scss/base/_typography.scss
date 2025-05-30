@@ -1,6 +1,6 @@
-@use "../utils" as u;
+@use "../abstracts" as a;
 
-$typography-font-weight: u.get(font-weight);
-$typography-font-family: u.get(font-family, base);
+$typography-font-weight: a.get-token(fontWeight);
+$typography-font-family: a.get-token(fontFamily, base);
 
-@include u.font-face-family($typography-font-family, $typography-font-weight);
+@include a.font-face-family($typography-font-family, $typography-font-weight);

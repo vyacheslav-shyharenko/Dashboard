@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "sass:string";
+
+@use "../tokens/t-tokens" as t;
+
+@function get($group, $key) {
+  $real-key: null;
+
+  // Спроба взяти аліас, якщо є
+  @if map.has-key(t.$ALIAS-TOKENS, $group) {
+    $group-alias-map: map.get(t.$ALIAS-TOKENS, $group);
+
+    @if map.has-key($group-alias-map, $key) {
+      $real-key: map.get($group-alias-map, $key);
+    }
+  }
+
+  // Якщо аліас не знайдено — використовуємо сам ключ
+  @if $real-key == null {
+    $real-key: $key;
+  }
+
+  // Повертаємо CSS-змінну
+  @return string.unquote("var(--#{$group}-#{$real-key})");
+}

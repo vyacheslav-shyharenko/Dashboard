@@ -1,0 +1,7 @@
+@use "../functions/f-get-token" as gt;
+
+$c-breakpoint-xs: gt.get(breakpoint, xs);
+$c-breakpoint-mobile: gt.get(breakpoint, mobile);
+$c-breakpoint-tablet: gt.get(breakpoint, tablet);
+$c-breakpoint-desktop: gt.get(breakpoint, desktop);
+$c-breakpoint-wide: gt.get(breakpoint, wide);

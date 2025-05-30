@@ -1,0 +1,21 @@
+@use "../functions/f-get-token" as fn;
+
+$colors: fn.get-token(color);
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+
+  .color-#{$name} {
+    color: $value;
+  }
+
+  .border-#{$name} {
+    border-color: $value;
+  }
+
+  .fill-#{$name} svg {
+    fill: $value;
+  }
+}
