@@ -1,43 +1,45 @@
-@use "../functions/f-get-token" as gt;
-
 @use "../functions/f-units" as r;
 
-@use "../tokens/t-tokens" as t;
+@use "../variables" as v;
 
 :root {
-  /* === COLORS === */
-  @each $key, $value in gt.get-token(color) {
-    --color-#{$key}: #{$value};
+  @each $key, $value in v.$bp-map {
+    --breakpoint-#{$key}: #{$value};
   }
 
   /* === FONTS-FAMILY === */
 
-  @each $key, $value in gt.get-token(font-family) {
+  @each $key, $value in v.$ff-map {
     --font-family-#{$key}: #{$value};
   }
 
   /* === FONT SIZES === */
-  @each $key, $value in gt.get-token(font-size) {
+  @each $key, $value in v.$fs-map {
     --font-size-#{$key}: #{r.rem($value)};
   }
 
   /* === FONT WEIGHTS === */
-  @each $key, $value in gt.get-token(font-weight) {
+  @each $key, $value in v.$fw-map {
     --font-weight-#{$key}: #{$value};
   }
 
   /* === LINE HEIGHTS === */
-  @each $key, $value in gt.get-token(line-height) {
+  @each $key, $value in v.$lh-map {
     --line-height-#{$key}: #{$value};
   }
 
   /* === SPACINGS === */
-  @each $key, $value in gt.get-token(spacing) {
+  @each $key, $value in v.$sp-map {
     --spacing-#{$key}: #{r.rem($value)};
   }
 
   /* === RADIUS === */
-  @each $key, $value in gt.get-token(radius) {
+  @each $key, $value in v.$r-map {
     --radius-#{$key}: #{r.rem($value)};
+  }
+
+  /* === COLORS === */
+  @each $key, $value in v.$color-map {
+    --color-#{$key}: #{$value};
   }
 }
