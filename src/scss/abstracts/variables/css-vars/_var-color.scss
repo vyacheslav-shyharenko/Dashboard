@@ -1,0 +1,31 @@
+@use "../../functions/f-get-var" as css;
+
+// TEXT CSS Variables
+$var-text-primary: css.get(color, text-primary);
+$var-text-secondary: css.get(color, text-secondary);
+$var-text-tertiary: css.get(color, text-tertiary);
+$var-text-link: css.get(color, text-link);
+$var-text-link-hover: css.get(color, text-link-hover);
+
+// BACKGROUND CSS Variables
+$var-bg-primary: css.get(color, bg-primary);
+$var-bg-secondary: css.get(color, bg-secondary);
+$var-bg-tertiary: css.get(color, bg-tertiary);
+$var-bg-overlay: css.get(color, bg-overlay);
+$var-bg-hover: css.get(color, bg-hover);
+
+// BUTTON CSS Variables
+// Primary
+$var-button-bg-primary: css.get(color, button-bg-primary);
+$var-button-text-primary: css.get(color, button-text-primary);
+$var-button-hover-primary: css.get(color, button-hover-primary);
+
+// Secondary
+$var-button-bg-secondary: css.get(color, button-bg-secondary);
+$var-button-text-secondary: css.get(color, button-text-secondary);
+$var-button-hover-secondary: css.get(color, button-hover-secondary);
+
+// Tertiary
+$var-button-bg-tertiary: css.get(color, button-bg-tertiary);
+$var-button-text-tertiary: css.get(color, button-text-tertiary);
+$var-button-hover-tertiary: css.get(color, button-hover-tertiary);

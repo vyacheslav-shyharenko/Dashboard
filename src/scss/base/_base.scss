@@ -1,65 +1,24 @@
-// @use "../utils" as u;
-
-// $base-font-family: u.get(font-family, base);
-// $base-font-size: u.get(font-size, base);
-// $base-font-weight: u.get(font-weight, regular);
-// $base-line-height: u.get(line-height, base);
-// $base-background-color: u.get(color, dark-primary);
-// $base-text-color: u.get(color, light-primary);
-// $base-min-width: u.get(breakpoint, xs);
-// $base-max-width: u.get(breakpoint, wide);
-
-// // Встановлюємо базовий розмір для rem
-// html {
-//   font-size: $base-font-size;
-//   scroll-behavior: smooth;
-// }
-
-// // Базові стилі для body
-// body {
-//   font-family: $base-font-family, sans-serif;
-//   font-weight: $base-font-weight;
-//   line-height: $base-line-height;
-//   color: $base-text-color;
-//   background-color: $base-background-color;
-//   @include u.clamp($base-min-width, $base-max-width, 16px, 14px);
-// }
-
-// button {
-//   font-family: inherit;
-//   color: currentColor;
-//   cursor: pointer;
-// }
-
-// summary {
-//   list-style-type: none;
-// }
-
-@use "../abstracts" as a;
+@use "../abstracts" as v;
 
 html {
-  // font-size: get(font-size, base);
+  font-size: v.$var-fs-primary;
   scroll-behavior: smooth;
+  background-color: v.$var-bg-primary;
 }
 
 // Базові стилі для body
 body {
-  font-family: a.get-token(fontFamily, base), sans-serif;
-  background-color: a.get(color, bg-page);
-  @include a.clamp(
-    a.get-token(breakpoint, xs),
-    a.get-token(breakpoint, wide),
-    16px,
-    14px
-  );
-}
+  @include v.clamp(v.$get-bp-xs, v.$get-bp-wide, v.$get-fs-primary, 16px);
+  font-family: v.$var-ff-primary, sans-serif;
+  color: v.$var-text-primary;
 
-button {
-  font-family: inherit;
-  color: currentColor;
-  cursor: pointer;
-}
+  & button {
+    font-family: inherit;
+    color: currentColor;
+    cursor: pointer;
+  }
 
-summary {
-  list-style-type: none;
+  & summary {
+    list-style-type: none;
+  }
 }

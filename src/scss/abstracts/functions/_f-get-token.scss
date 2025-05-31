@@ -2,20 +2,32 @@
 @use "sass:meta";
 @use "../tokens/t-tokens" as t;
 
-@function get-token($keys...) {
-  $map: t.$TOKENS;
-
-  @each $key in $keys {
-    @if meta.type-of($map) != "map" {
-      @error "❌ Not a map at key `#{$key}` in #{inspect($keys)}";
+@function get-token($group, $key: null) {
+  // Якщо ключ не передано — повертаємо всю групу
+  @if $key == null {
+    @if not map.has-key(t.$TOKENS, $group) {
+      @error "❌ Group `#{$group}` not found in TOKENS.";
     }
 
-    @if map.has-key($map, $key) {
-      $map: map.get($map, $key);
-    } @else {
-      @error "❌ Token not found: `#{$key}` in #{inspect($keys)}";
+    @return map.get(t.$TOKENS, $group);
+  }
+
+  // Працюємо з аліасами, якщо є
+  $real-key: $key;
+
+  @if map.has-key(t.$ALIAS-TOKENS, $group) {
+    $group-alias: map.get(t.$ALIAS-TOKENS, $group);
+
+    @if map.has-key($group-alias, $key) {
+      $real-key: map.get($group-alias, $key);
     }
   }
 
-  @return $map;
+  $group-map: map.get(t.$TOKENS, $group);
+
+  @if not map.has-key($group-map, $real-key) {
+    @error "❌ Token `#{$real-key}` not found in group `#{$group}`.";
+  }
+
+  @return map.get($group-map, $real-key);
 }

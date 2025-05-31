@@ -1,0 +1,7 @@
+@use "../../functions/f-get-token" as tok;
+
+$get-fw-map: tok.get-token(font-weight);
+
+$get-fw-regular: tok.get-token(font-weight, regular);
+$get-fw-medium: tok.get-token(font-weight, medium);
+$get-fw-bold: tok.get-token(font-weight, bold);

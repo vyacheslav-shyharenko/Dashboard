@@ -1,60 +1,42 @@
-$ALIAS-COLORS: (
+$ALIAS-COLOR: (
   // TEXT
-  "text-main": "1",
-  "text-secondary": "2",
-  "text-tertiary": "3",
-  "text-inverted": "4",
-  "text-link": "5",
-  "text-link-hover": "6",
-  "text-disabled": "7",
-  "text-danger": "8",
+  text-primary: lightt,
+  text-secondary: light-secondary,
+  text-tertiary: light-tertiary,
+  text-link: info,
+  text-link-hover: warning,
 
   // BACKGROUND
-  "bg-page": "4",
-  "bg-subtle": "9",
-  "bg-muted": "10",
-  "bg-inverted": "1",
-  "bg-overlay": "11",
-  "bg-hover": "12",
-  "bg-selected": "13",
-  "bg-disabled": "9",
+  bg-primary: darkk,
+  bg-secondary: dark-primary,
+  bg-tertiary: dark-secondary,
+  bg-overlay: dark-tertiary,
+  bg-hover: light-secondary,
 
   // BORDER
-  "border-default": "14",
-  "border-subtle": "15",
-  "border-strong": "3",
-  "border-focus": "16",
-  "border-danger": "17",
+  border-primary: dark-tertiary,
+  border-secondary: dark-secondary,
+  border-tertiary: light-tertiary,
 
   // BUTTON
-  "button-primary-bg": "5",
-  "button-primary-text": "4",
-  "button-primary-hover": "6",
+  // Primary
+  button-bg-primary: button-primary,
+  button-text-primary: lightt,
+  button-hover-primary: button-primary-hover,
 
-  "button-secondary-bg": "10",
-  "button-secondary-text": "1",
-  "button-secondary-hover": "12",
+  // Secondary
+  button-bg-secondary: light-secondary,
+  button-text-secondary: darkk,
+  button-hover-secondary: light-tertiary,
 
-  "button-danger-bg": "8",
-  "button-danger-text": "4",
-  "button-danger-hover": "18",
-
-  // STATUS
-  "status-success-bg": "19",
-  "status-success-border": "20",
-  "status-success-text": "21",
-
-  "status-warning-bg": "22",
-  "status-warning-border": "23",
-  "status-warning-text": "24",
-
-  "status-danger-bg": "25",
-  "status-danger-border": "26",
-  "status-danger-text": "27",
+  // Tertiary
+  button-bg-tertiary: accent-tertiary,
+  button-text-tertiary: lightt,
+  button-hover-tertiary: accent-secondary,
 
   // BRAND
-  "brand-main": "5",
-  "brand-accent": "28",
-  "brand-dark": "1",
-  "brand-light": "9"
+  brand-main: accent-primary,
+  brand-accent: accent-secondary,
+  brand-dark: darkk,
+  brand-light: lightt // #ffffff
 );

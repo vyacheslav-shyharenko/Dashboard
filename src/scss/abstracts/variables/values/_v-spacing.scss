@@ -1,0 +1,15 @@
+@use "../../functions/f-get-token" as tok;
+
+$get-sp-map: tok.get-token(spacing);
+
+$get-sp-none: tok.get-token(spacing, none);
+$get-sp-xxs: tok.get-token(spacing, xxs);
+$get-sp-xs: tok.get-token(spacing, xs);
+$get-sp-sm: tok.get-token(spacing, sm);
+$get-sp-md: tok.get-token(spacing, md);
+$get-sp-lg: tok.get-token(spacing, lg);
+$get-sp-xl: tok.get-token(spacing, xl);
+$get-sp-xxl: tok.get-token(spacing, xxl);
+$get-sp-section: tok.get-token(spacing, section);
+$get-sp-container-min: tok.get-token(spacing, container-min);
+$get-sp-container-max: tok.get-token(spacing, container-max);

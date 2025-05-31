@@ -1,0 +1,6 @@
+@use "../../functions/f-get-var" as css;
+
+$var-lh-tight: css.get(line-height, tight);
+$var-lh-base: css.get(line-height, base);
+$var-lh-relaxed: css.get(line-height, relaxed);
+$var-lh-loose: css.get(line-height, loose);

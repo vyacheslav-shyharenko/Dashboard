@@ -10,24 +10,25 @@
     --color-#{$key}: #{$value};
   }
 
+  /* === FONTS-FAMILY === */
+
+  @each $key, $value in gt.get-token(font-family) {
+    --font-family-#{$key}: #{$value};
+  }
+
   /* === FONT SIZES === */
-  @each $key, $value in gt.get-token(fontSize) {
+  @each $key, $value in gt.get-token(font-size) {
     --font-size-#{$key}: #{r.rem($value)};
   }
 
   /* === FONT WEIGHTS === */
-  @each $key, $value in gt.get-token(fontWeight) {
+  @each $key, $value in gt.get-token(font-weight) {
     --font-weight-#{$key}: #{$value};
   }
 
   /* === LINE HEIGHTS === */
-  @each $key, $value in gt.get-token(lineHeight) {
+  @each $key, $value in gt.get-token(line-height) {
     --line-height-#{$key}: #{$value};
-  }
-
-  /* === RADIUS === */
-  @each $key, $value in gt.get-token(radius) {
-    --radius-#{$key}: #{r.rem($value)};
   }
 
   /* === SPACINGS === */
@@ -35,9 +36,8 @@
     --spacing-#{$key}: #{r.rem($value)};
   }
 
-  /* === FONTS-FAMILY === */
-
-  @each $key, $value in gt.get-token(fontFamily) {
-    --font-family-#{$key}: #{$value};
+  /* === RADIUS === */
+  @each $key, $value in gt.get-token(radius) {
+    --radius-#{$key}: #{r.rem($value)};
   }
 }

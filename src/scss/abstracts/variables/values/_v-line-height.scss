@@ -1,0 +1,8 @@
+@use "../../functions/f-get-token" as tok;
+
+$get-lh-map: tok.get-token(line-height);
+
+$get-lh-tight: tok.get-token(line-height, tight);
+$get-lh-base: tok.get-token(line-height, base);
+$get-lh-relaxed: tok.get-token(line-height, relaxed);
+$get-lh-loose: tok.get-token(line-height, loose);

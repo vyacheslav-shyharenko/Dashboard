@@ -1,6 +1,6 @@
 @use "../functions" as fn;
 
-$font-sizes: fn.get-token(fontSize);
+$font-sizes: fn.get-token(font-size);
 
 @each $size, $value in $font-sizes {
   .fs-#{$size} {

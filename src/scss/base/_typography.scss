@@ -1,6 +1,3 @@
 @use "../abstracts" as a;
 
-$typography-font-weight: a.get-token(fontWeight);
-$typography-font-family: a.get-token(fontFamily, base);
-
-@include a.font-face-family($typography-font-family, $typography-font-weight);
+@include a.font-face-family(a.$get-ff-primary, a.$get-fw-map);

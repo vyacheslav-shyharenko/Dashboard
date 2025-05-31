@@ -1,0 +1,10 @@
+@use "../../functions/f-get-token" as tok;
+
+$get-fs-map: tok.get-token(font-size);
+
+$get-fs-xs: tok.get-token(font-size, xs);
+$get-fs-sm: tok.get-token(font-size, sm);
+$get-fs-primary: tok.get-token(font-size, primary);
+$get-fs-md: tok.get-token(font-size, md);
+$get-fs-lg: tok.get-token(font-size, lg);
+$get-fs-xl: tok.get-token(font-size, xl);

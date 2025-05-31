@@ -1,4 +1,4 @@
-@use "../abstracts" as a;
+@use "../abstracts" as u;
 
 // $l-width-xs: u.get(breakpoint, xs);
 // $l-width-mobile: u.get(breakpoint, mobile);
@@ -7,7 +7,7 @@
 // $l-width-wide: u.get(breakpoint, wide);
 
 // .layout {
-//   min-width: $l-width-mobile;
+//   // min-width: u.$c-breakpoint-mobile;
 
 //   @include u.respond-to(desktop) {
 //     display: grid;

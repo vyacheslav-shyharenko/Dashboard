@@ -1,5 +1,0 @@
-@use "../functions/f-get-token" as gt;
-
-$c-font-family-base: gt.get(font-family, base);
-$c-font-family-secondary: gt.get(font-family, secondary);
-$c-font-family-accent: gt.get(font-family, accent);

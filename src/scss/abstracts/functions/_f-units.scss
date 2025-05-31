@@ -3,6 +3,8 @@
 
 @use "../functions/f-get-token" as gt;
 
+@use "../variables" as v;
+
 @function remove-unit($value) {
   @if meta.type-of($value) != "number" {
     @error "#{$value} is not a number.";
@@ -17,7 +19,7 @@
 
 @function rem($px-value, $baseFontSize: null) {
   @if $baseFontSize == null {
-    $baseFontSize: gt.get-token(fontSize, base);
+    $baseFontSize: v.$get-fs-primary;
   }
 
   @return #{math.div(remove-unit($px-value), remove-unit($baseFontSize))}rem;

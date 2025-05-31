@@ -1,0 +1,13 @@
+@use "../../functions/f-get-var" as css;
+
+$var-sp-none: css.get(spacing, none);
+$var-sp-xxs: css.get(spacing, xxs);
+$var-sp-xs: css.get(spacing, xs);
+$var-sp-sm: css.get(spacing, sm);
+$var-sp-md: css.get(spacing, md);
+$var-sp-lg: css.get(spacing, lg);
+$var-sp-xl: css.get(spacing, xl);
+$var-sp-xxl: css.get(spacing, xxl);
+$var-sp-section: css.get(spacing, section);
+$var-sp-container-min: css.get(spacing, container-min);
+$var-sp-container-max: css.get(spacing, container-max);

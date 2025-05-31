@@ -1,0 +1,8 @@
+@use "../../functions/f-get-var" as css;
+
+$var-fs-xs: css.get(font-size, xs);
+$var-fs-sm: css.get(font-size, sm);
+$var-fs-primary: css.get(font-size, primary);
+$var-fs-md: css.get(font-size, md);
+$var-fs-lg: css.get(font-size, lg);
+$var-fs-xl: css.get(font-size, xl);
