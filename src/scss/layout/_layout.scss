@@ -1,5 +1,14 @@
-@use "../abstracts" as v;
+@use "../abstracts" as *;
 
 .layout {
-  min-width: v.$var-bp-mobile;
+  @include respond-to(desktop) {
+    display: grid;
+    grid-template-columns: rem(248px) 1fr;
+    grid-template-rows: rem(68px) 1fr;
+
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
+  }
+  min-width: $var-bp-mobile;
 }
