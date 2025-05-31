@@ -38,5 +38,15 @@ $ALIAS-COLOR: (
   brand-main: accent-primary,
   brand-accent: accent-secondary,
   brand-dark: darkk,
-  brand-light: lightt // #ffffff
+  brand-light: lightt,
+
+  // SVG-FILL
+  fill-primary: fill-primary,
+  fill-secondary: fill-secondary,
+  fill-tertiary: fill-tertiary,
+
+  // SVG-STROKE
+  stroke-primary: fill-primary,
+  stroke-secondary: fill-secondary,
+  stroke-tertiary: fill-tertiary
 );

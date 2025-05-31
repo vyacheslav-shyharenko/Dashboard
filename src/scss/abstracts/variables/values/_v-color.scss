@@ -31,3 +31,15 @@ $get-button-hover-secondary: tok.get-token(color, button-hover-secondary);
 $get-button-bg-tertiary: tok.get-token(color, button-bg-tertiary);
 $get-button-text-tertiary: tok.get-token(color, button-text-tertiary);
 $get-button-hover-tertiary: tok.get-token(color, button-hover-tertiary);
+
+// SVG CSS Variables
+
+// Fill
+$get-fill-primary: tok.get-token(color, fill-primary);
+$get-fill-secondary: tok.get-token(color, fill-secondary);
+$get-fill-tertiary: tok.get-token(color, fill-tertiary);
+
+// Stroke
+$get-stroke-primary: tok.get-token(color, stroke-primary);
+$get-stroke-secondary: tok.get-token(color, stroke-secondary);
+$get-stroke-tertiary: tok.get-token(color, stroke-tertiary);

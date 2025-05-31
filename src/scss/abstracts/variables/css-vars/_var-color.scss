@@ -29,3 +29,15 @@ $var-button-hover-secondary: css.get(color, button-hover-secondary);
 $var-button-bg-tertiary: css.get(color, button-bg-tertiary);
 $var-button-text-tertiary: css.get(color, button-text-tertiary);
 $var-button-hover-tertiary: css.get(color, button-hover-tertiary);
+
+// SVG CSS Variables
+
+// Fill
+$var-fill-primary: css.get(color, fill-primary);
+$var-fill-secondary: css.get(color, fill-secondary);
+$var-fill-tertiary: css.get(color, fill-tertiary);
+
+// Stroke
+$var-stroke-primary: css.get(color, stroke-primary);
+$var-stroke-secondary: css.get(color, stroke-secondary);
+$var-stroke-tertiary: css.get(color, stroke-tertiary);
