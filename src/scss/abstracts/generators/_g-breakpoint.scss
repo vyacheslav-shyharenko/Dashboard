@@ -1,0 +1,9 @@
+@use "../variables/values/v-breakpoint" as get;
+
+@use "../functions/f-units" as fn;
+
+@each $size, $value in get.$bp-map {
+  .fs-#{$size} {
+    font-size: fn.rem($value);
+  }
+}

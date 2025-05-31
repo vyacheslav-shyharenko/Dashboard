@@ -1,45 +1,45 @@
 @use "../../functions/f-get-token" as tok;
 
-$get-color-map: tok.get-token(color, text-primary);
+$color-map: tok.get-token(color);
 
 // TEXT CSS Variables
-$get-text-primary: tok.get-token(color, text-primary);
-$get-text-secondary: tok.get-token(color, text-secondary);
-$get-text-tertiary: tok.get-token(color, text-tertiary);
-$get-text-link: tok.get-token(color, text-link);
-$get-text-link-hover: tok.get-token(color, text-link-hover);
+$text-primary: tok.get-token(color, text-primary);
+$text-secondary: tok.get-token(color, text-secondary);
+$text-tertiary: tok.get-token(color, text-tertiary);
+$text-link: tok.get-token(color, text-link);
+$text-link-hover: tok.get-token(color, text-link-hover);
 
 // BACKGROUND CSS Variables
-$get-bg-primary: tok.get-token(color, bg-primary);
-$get-bg-secondary: tok.get-token(color, bg-secondary);
-$get-bg-tertiary: tok.get-token(color, bg-tertiary);
-$get-bg-overlay: tok.get-token(color, bg-overlay);
-$get-bg-hover: tok.get-token(color, bg-hover);
+$bg-primary: tok.get-token(color, bg-primary);
+$bg-secondary: tok.get-token(color, bg-secondary);
+$bg-tertiary: tok.get-token(color, bg-tertiary);
+$bg-overlay: tok.get-token(color, bg-overlay);
+$bg-hover: tok.get-token(color, bg-hover);
 
 // BUTTON CSS Variables
 // Primary
-$get-button-bg-primary: tok.get-token(color, button-bg-primary);
-$get-button-text-primary: tok.get-token(color, button-text-primary);
-$get-button-hover-primary: tok.get-token(color, button-hover-primary);
+$button-bg-primary: tok.get-token(color, button-bg-primary);
+$button-text-primary: tok.get-token(color, button-text-primary);
+$button-hover-primary: tok.get-token(color, button-hover-primary);
 
 // Secondary
-$get-button-bg-secondary: tok.get-token(color, button-bg-secondary);
-$get-button-text-secondary: tok.get-token(color, button-text-secondary);
-$get-button-hover-secondary: tok.get-token(color, button-hover-secondary);
+$button-bg-secondary: tok.get-token(color, button-bg-secondary);
+$button-text-secondary: tok.get-token(color, button-text-secondary);
+$button-hover-secondary: tok.get-token(color, button-hover-secondary);
 
 // Tertiary
-$get-button-bg-tertiary: tok.get-token(color, button-bg-tertiary);
-$get-button-text-tertiary: tok.get-token(color, button-text-tertiary);
-$get-button-hover-tertiary: tok.get-token(color, button-hover-tertiary);
+$button-bg-tertiary: tok.get-token(color, button-bg-tertiary);
+$button-text-tertiary: tok.get-token(color, button-text-tertiary);
+$button-hover-tertiary: tok.get-token(color, button-hover-tertiary);
 
 // SVG CSS Variables
 
 // Fill
-$get-fill-primary: tok.get-token(color, fill-primary);
-$get-fill-secondary: tok.get-token(color, fill-secondary);
-$get-fill-tertiary: tok.get-token(color, fill-tertiary);
+$fill-primary: tok.get-token(color, fill-primary);
+$fill-secondary: tok.get-token(color, fill-secondary);
+$fill-tertiary: tok.get-token(color, fill-tertiary);
 
 // Stroke
-$get-stroke-primary: tok.get-token(color, stroke-primary);
-$get-stroke-secondary: tok.get-token(color, stroke-secondary);
-$get-stroke-tertiary: tok.get-token(color, stroke-tertiary);
+$stroke-primary: tok.get-token(color, stroke-primary);
+$stroke-secondary: tok.get-token(color, stroke-secondary);
+$stroke-tertiary: tok.get-token(color, stroke-tertiary);

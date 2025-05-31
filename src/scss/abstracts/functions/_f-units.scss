@@ -19,7 +19,7 @@
 
 @function rem($px-value, $baseFontSize: null) {
   @if $baseFontSize == null {
-    $baseFontSize: v.$get-fs-primary;
+    $baseFontSize: v.$fs-primary;
   }
 
   @return #{math.div(remove-unit($px-value), remove-unit($baseFontSize))}rem;

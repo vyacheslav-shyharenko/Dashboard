@@ -1,61 +1,56 @@
 $COLOR: (
-  // BASE
-  lightt: #ffffff,
-  light-primary: #f1f1f2,
-  light-secondary: #b5b5b6,
-  light-tertiary: #8c8c96,
+  // TEXT
+  text-primary: #ffffff,
+  text-secondary: #374151,
+  text-tertiary: #6b7280,
+  text-link: #2563eb,
+  text-link-hover: #1d4ed8,
 
-  darkk: #000000,
-  dark-primary: #131313,
-  dark-secondary: #1c1c24,
-  dark-tertiary: #26262c,
+  // BACKGROUND
+  bg-primary: #000000,
+  bg-secondary: #9ba9bf,
+  bg-tertiary: #194bb0,
+  bg-overlay: rgba(0, 0, 0, 0.4),
+  bg-hover: #e5e7eb,
 
-  // ACCENTS
-  accent-primary: #f97316,
-  accent-secondary: #f05227,
-  accent-tertiary: #d1450a,
+  // BORDER
+  border-default: #d1d5db,
+  border-subtle: #e5e7eb,
+  border-strong: #6b7280,
+  border-focus: #3b82f6,
+  border-danger: #ef4444,
 
-  // FEEDBACK
-  danger: #f43f5e,
-  warning: #a855f7,
-  success: #22c55e,
-  info: #6366f1,
+  // BUTTON
+  button-bg-primary: #2563eb,
+  button-text-primary: #ffffff,
+  button-hover-primary: #1d4ed8,
 
-  // BUTTON PRIMARY STATES
-  button-primary: #f97316,
-  button-primary-hover: #f05227,
-  button-primary-pressed: #d1450a,
-  button-primary-disabled: #b5b5b6,
+  button-bg-secondary: #2563eb,
+  button-text-secondary: #ffffff,
+  button-hover-secondary: #1d4ed8,
 
-  // BUTTON ADDITIONAL STATES (припускаю синій акцент)
-  button-additional: #6366f1,
-  button-additional-hover: #4f46e5,
-  button-additional-pressed: #4338ca,
-  button-additional-disabled: #8c8c96,
+  button-bg-tertiary: #2563eb,
+  button-text-tertiary: #ffffff,
+  button-hover-tertiary: #1d4ed8,
 
-  // BUTTON DANGER
-  button-danger: #f43f5e,
-  button-danger-hover: #e11d48,
-  button-danger-pressed: #be123c,
-  button-danger-disabled: #b5b5b6,
+  // STATUS
+  status-success-bg: #dcfce7,
+  status-success-border: #4ade80,
+  status-success-text: #15803d,
 
-  // BUTTON SUCCESS
-  button-success: #22c55e,
-  button-success-hover: #16a34a,
-  button-success-pressed: #15803d,
-  button-success-disabled: #b5b5b6,
+  status-warning-bg: #fef9c3,
+  status-warning-border: #facc15,
+  status-warning-text: #a16207,
 
-  // BUTTON WARNING
-  button-warning: #a855f7,
-  button-warning-hover: #9333ea,
-  button-warning-pressed: #7e22ce,
-  button-warning-disabled: #b5b5b6,
+  status-danger-bg: #fee2e2,
+  status-danger-border: #f87171,
+  status-danger-text: #b91c1c,
 
-  // BUTTON INFO
-  button-info: #6366f1,
-  button-info-hover: #4f46e5,
-  button-info-pressed: #4338ca,
-  button-info-disabled: #b5b5b6,
+  // BRAND
+  brand-main: #2563eb,
+  brand-accent: #ec4899,
+  brand-dark: #111827,
+  brand-light: #f9fafb,
 
   // SVG-FILL
   fill-primary: #f97316,
@@ -70,7 +65,7 @@ $COLOR: (
   // SVG-STROKE
   stroke-primary: #131313,
   stroke-secondary: #1c1c24,
-  stroke-tertiary: #3f3f50,
+  stroke-tertiary: #585861,
   stroke-muted: #b5b5b6,
   stroke-light: #ffffff,
   stroke-dark: #000000,

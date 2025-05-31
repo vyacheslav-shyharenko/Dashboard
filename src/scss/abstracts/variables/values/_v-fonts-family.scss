@@ -1,7 +1,7 @@
 @use "../../functions/f-get-token" as tok;
 
-$get-ff-map: tok.get-token(font-family, primary);
+$ff-map: tok.get-token(font-family);
 
-$get-ff-primary: tok.get-token(font-family, primary);
-$get-ff-secondary: tok.get-token(font-family, secondary);
-$get-ff-accent: tok.get-token(font-family, accent);
+$ff-primary: tok.get-token(font-family, primary);
+$ff-secondary: tok.get-token(font-family, secondary);
+$ff-accent: tok.get-token(font-family, accent);

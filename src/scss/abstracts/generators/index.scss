@@ -1,3 +1,5 @@
+@forward "./g-breakpoint";
+
 @forward "./g-color"; // Генерує утилітарні класи кольору, фону, бордеру та fill з токенів.
 
 @forward "./g-display"; // Генерує утилітарні display класи: .d-flex, .d-grid, .d-none тощо.

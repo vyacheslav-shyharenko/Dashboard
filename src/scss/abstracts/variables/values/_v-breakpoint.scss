@@ -3,8 +3,8 @@
 $bp-map: tok.get-token(breakpoint);
 
 // Values
-$get-bp-xs: tok.get-token(breakpoint, xs);
-$get-bp-mobile: tok.get-token(breakpoint, mobile);
-$get-bp-tablet: tok.get-token(breakpoint, tablet);
-$get-bp-desktop: tok.get-token(breakpoint, desktop);
-$get-bp-wide: tok.get-token(breakpoint, wide);
+$bp-xs: tok.get-token(breakpoint, xs);
+$bp-mobile: tok.get-token(breakpoint, mobile);
+$bp-tablet: tok.get-token(breakpoint, tablet);
+$bp-desktop: tok.get-token(breakpoint, desktop);
+$bp-wide: tok.get-token(breakpoint, wide);

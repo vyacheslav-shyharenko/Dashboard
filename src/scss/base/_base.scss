@@ -8,7 +8,7 @@ html {
 
 // Базові стилі для body
 body {
-  @include v.clamp(v.$get-bp-xs, v.$get-bp-wide, v.$get-fs-primary, 16px);
+  @include v.clamp(v.$bp-xs, v.$bp-wide, v.$fs-primary, 16px);
   font-family: v.$var-ff-primary, sans-serif;
   color: v.$var-text-primary;
 

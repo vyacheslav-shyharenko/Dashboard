@@ -1,8 +1,6 @@
-@use "../functions/f-get-token" as fn;
+@use "../variables/values/v-color" as get;
 
-$colors: fn.get-token(color);
-
-@each $name, $value in $colors {
+@each $name, $value in get.$color-map {
   .bg-#{$name} {
     background-color: $value;
   }

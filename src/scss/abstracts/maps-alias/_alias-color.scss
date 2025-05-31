@@ -1,52 +1,63 @@
 $ALIAS-COLOR: (
   // TEXT
-  text-primary: lightt,
-  text-secondary: light-secondary,
-  text-tertiary: light-tertiary,
-  text-link: info,
-  text-link-hover: warning,
+  text-primary: text-primary,
+  text-secondary: text-secondary,
+  text-tertiary: text-tertiary,
+  text-link: text-link,
+  text-link-hover: text-link-hover,
 
   // BACKGROUND
-  bg-primary: darkk,
-  bg-secondary: dark-primary,
-  bg-tertiary: dark-secondary,
-  bg-overlay: dark-tertiary,
-  bg-hover: light-secondary,
+  bg-primary: bg-primary,
+  bg-secondary: bg-secondary,
+  bg-tertiary: bg-tertiary,
+  bg-overlay: bg-overlay,
+  bg-hover: bg-hover,
 
   // BORDER
-  border-primary: dark-tertiary,
-  border-secondary: dark-secondary,
-  border-tertiary: light-tertiary,
+  border-primary: border-primary,
+  border-secondary: border-secondary,
+  border-tertiary: border-tertiary,
 
   // BUTTON
   // Primary
-  button-bg-primary: button-primary,
-  button-text-primary: lightt,
-  button-hover-primary: button-primary-hover,
+  button-bg-primary: button-bg-primary,
+  button-text-primary: button-text-primary,
+  button-hover-primary: button-hover-primary,
 
   // Secondary
-  button-bg-secondary: light-secondary,
-  button-text-secondary: darkk,
-  button-hover-secondary: light-tertiary,
+  button-bg-secondary: button-bg-secondary,
+  button-text-secondary: button-text-secondary,
+  button-hover-secondary: button-hover-secondary,
 
   // Tertiary
-  button-bg-tertiary: accent-tertiary,
-  button-text-tertiary: lightt,
-  button-hover-tertiary: accent-secondary,
+  button-bg-tertiary: button-bg-tertiary,
+  button-text-tertiary: button-text-tertiary,
+  button-hover-tertiary: button-hover-tertiary,
 
   // BRAND
-  brand-main: accent-primary,
-  brand-accent: accent-secondary,
-  brand-dark: darkk,
-  brand-light: lightt,
+  brand-main: brand-main,
+  brand-accent: brand-accent,
+  brand-dark: brand-dark,
+  brand-light: brand-light,
 
   // SVG-FILL
   fill-primary: fill-primary,
   fill-secondary: fill-secondary,
   fill-tertiary: fill-tertiary,
+  fill-muted: fill-muted,
+  fill-success: fill-success,
+  fill-warning: fill-warning,
+  fill-danger: fill-danger,
+  fill-info: fill-info,
 
   // SVG-STROKE
-  stroke-primary: fill-primary,
-  stroke-secondary: fill-secondary,
-  stroke-tertiary: fill-tertiary
+  stroke-primary: stroke-primary,
+  stroke-secondary: stroke-secondary,
+  stroke-tertiary: stroke-tertiary,
+  stroke-muted: stroke-muted,
+  stroke-light: stroke-light,
+  stroke-dark: stroke-dark,
+  stroke-success: stroke-success,
+  stroke-danger: stroke-danger,
+  stroke-warning: stroke-warning
 );
