@@ -22,3 +22,9 @@
     @content;
   }
 }
+
+@mixin after {
+  &::after {
+    @content;
+  }
+}

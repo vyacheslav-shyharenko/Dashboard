@@ -1,1 +1,28 @@
+@use "../abstracts" as *;
 
+.main {
+  grid-area: main;
+
+  display: grid;
+  gap: rem(40px);
+  padding: $sp-md;
+
+  grid-template-areas:
+    "welcome"
+    "co-workers"
+    "tasks"
+    "reports";
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: $sp-xl;
+    gap: rem(36px);
+
+    grid-area: main;
+
+    grid-template-areas:
+      "welcome welcome"
+      "co-workers co-workers"
+      "tasks reports";
+  }
+}

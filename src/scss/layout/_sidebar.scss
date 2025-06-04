@@ -1,5 +1,84 @@
 @use "../abstracts" as *;
 
 .sidebar {
-  @include respond-to();
+  grid-area: sidebar;
+
+  @include respond-to(desktop, max) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: rgba($bg-primary, 0.6);
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .menu {
+    position: relative;
+    box-shadow: inset -5px 0px 10px -6px rgb(131, 131, 131);
+
+    height: 100%;
+    background-color: $bg-secondary;
+
+    @include respond-to(desktop, max) {
+      max-width: rem(248px);
+
+      background-color: $bg-primary;
+    }
+  }
+
+  & .menu-btn {
+    position: absolute;
+    right: 0;
+
+    stroke: $stroke-primary;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  & .logo {
+    position: relative;
+
+    height: rem(68px);
+
+    display: flex;
+    align-items: center;
+
+    padding: $sp-md $sp-lg;
+    gap: $sp-sm;
+
+    font-weight: $fw-bold;
+    font-size: $fs-lg;
+
+    color: $var-text-accent;
+    box-shadow: inset 0px -5px 10px -6px rgb(131, 131, 131);
+  }
+
+  & .menu-link {
+    display: flex;
+    padding: $sp-md $sp-lg;
+    gap: $sp-lg;
+    color: $text-secondary;
+    transition: color 350ms ease-in-out;
+
+    @include hover {
+      color: $text-primary;
+
+      & .menu-icon {
+        fill: $text-primary;
+      }
+    }
+  }
 }

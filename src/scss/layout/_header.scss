@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: $sp-md;
+
+  @include respond-to(desktop) {
+    background-color: $bg-secondary;
+
+    box-shadow: inset 0px -5px 10px -6px rgb(131, 131, 131);
+  }
+
+  & .menu-btn {
+    display: flex;
+    align-items: center;
+    gap: $sp-md;
+    margin-right: auto;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  & .search-input {
+    width: 100%;
+    @include respond-to(desktop, max) {
+      display: none;
+    }
+  }
+
+  & .search-field {
+    margin-right: 24px;
+
+    @include respond-to(desktop) {
+      width: 100%;
+      display: flex;
+      gap: $sp-sm + 2;
+    }
+  }
+}

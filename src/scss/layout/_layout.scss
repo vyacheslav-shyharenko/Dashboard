@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 
 .layout {
+  min-width: $var-bp-mobile;
+
   @include respond-to(desktop) {
     display: grid;
     grid-template-columns: rem(248px) 1fr;
@@ -10,5 +12,4 @@
       "sidebar header"
       "sidebar main";
   }
-  min-width: $var-bp-mobile;
 }
