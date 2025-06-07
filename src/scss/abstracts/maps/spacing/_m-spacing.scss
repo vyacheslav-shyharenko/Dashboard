@@ -1,0 +1,15 @@
+@use "../../functions/f-units" as u;
+
+$SPACING: (
+  none: u.rem(0px),
+  xxs: u.rem(2px),
+  xs: u.rem(4px),
+  sm: u.rem(8px),
+  md: u.rem(16px),
+  lg: u.rem(24px),
+  xl: u.rem(32px),
+  xxl: u.rem(48px),
+  section: u.rem(40px),
+  container-min: u.rem(16px),
+  container-max: u.rem(48px),
+);

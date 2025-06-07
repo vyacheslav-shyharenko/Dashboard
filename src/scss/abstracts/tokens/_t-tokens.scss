@@ -1,9 +1,13 @@
 @use "../maps" as m;
-@use "../maps-alias" as ma;
 
 $TOKENS: (
   breakpoint: m.$BREAKPOINT,
-  color: m.$COLOR,
+  color: (
+    bg: m.$COLOR-BG,
+    text: m.$COLOR-TEXT,
+    button: m.$COLOR-BUTTON,
+    svg: m.$COLOR-ICON,
+  ),
   font-family: m.$FONT-FAMILY,
   font-size: m.$FONT-SIZE,
   font-weight: m.$FONT-WEIGHT,
@@ -11,16 +15,4 @@ $TOKENS: (
   radius: m.$RADIUS,
   spacing: m.$SPACING,
   shadow: m.$SHADOW,
-);
-
-$ALIAS-TOKENS: (
-  breakpoint: ma.$ALIAS-BREAKPOINT,
-  color: ma.$ALIAS-COLOR,
-  font-family: ma.$ALIAS-FONT_FAMILY,
-  font-size: ma.$ALIAS-FONT-SIZE,
-  font-weight: ma.$ALIAS-FONT-WEIGHT,
-  line-height: ma.$ALIAS-LINE-HEIGHT,
-  radius: ma.$ALIAS-RADIUS,
-  spacing: ma.$ALIAS-SPACING,
-  shadow: ma.$ALIAS-SHADOW,
 );

@@ -1,10 +1,12 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$fs-map: tok.get-token(font-size);
+// Повна мапа розмірів шрифтів
+$font-sizes: token.get(font-size);
 
-$fs-xs: tok.get-token(font-size, xs);
-$fs-sm: tok.get-token(font-size, sm);
-$fs-primary: tok.get-token(font-size, primary);
-$fs-md: tok.get-token(font-size, md);
-$fs-lg: tok.get-token(font-size, lg);
-$fs-xl: tok.get-token(font-size, xl);
+// Звичайні SCSS-значення
+$fs-xs: token.get(font-size, xs);
+$fs-sm: token.get(font-size, sm);
+$fs-base: token.get(font-size, base);
+$fs-md: token.get(font-size, md);
+$fs-lg: token.get(font-size, lg);
+$fs-xl: token.get(font-size, xl);

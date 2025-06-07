@@ -4,55 +4,26 @@
   grid-area: welcome;
 
   & .page-title {
-    font-family: var(--font-family);
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0.03em;
-    color: var(--light-secondary);
-    margin-bottom: 16px;
+    margin-bottom: $v-sp-md;
   }
 
   & .page-title-accent {
-    font-weight: 600;
-    line-height: 140%;
-    letter-spacing: 0.03em;
+    font-size: $v-fs-md;
+    color: $v-text-title;
+    font-weight: $v-fw-medium;
     text-align: center;
-    color: var(--light-primary);
   }
 
   & .welcome-btn {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    border-radius: 12px;
-    padding: 8px 12px;
-    font-family: var(--font-family);
-    font-weight: 500;
-    line-height: 143%;
-    letter-spacing: 0.04em;
-    text-align: right;
-    background-color: $var-text-accent;
-    color: $var-text-primary;
+    @include flex-y(8px);
+
+    border-radius: $v-r-lg;
+    padding: $v-sp-sm $v-sp-md;
+    color: $v-btn-text-primary;
+    background-color: $v-btn-primary;
 
     & .btn-icon {
-      fill: white;
+      fill: $v-svg-secondary;
     }
   }
-}
-
-.welcome {
-}
-.page-title {
-}
-.page-title-accent {
-}
-.welcome-btn {
-}
-.btn {
-}
-.btn--primary {
-}
-.btn-icon {
-}
-.btn-inner {
 }

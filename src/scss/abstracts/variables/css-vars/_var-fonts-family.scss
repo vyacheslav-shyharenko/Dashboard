@@ -1,5 +1,5 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-$var-ff-primary: css.get(font-family, primary);
-$var-ff-secondary: css.get(font-family, secondary);
-$var-ff-accent: css.get(font-family, accent);
+$v-ff-primary: css.get(font-family, primary, css);
+$v-ff-secondary: css.get(font-family, secondary, css);
+$v-ff-accent: css.get(font-family, accent, css);

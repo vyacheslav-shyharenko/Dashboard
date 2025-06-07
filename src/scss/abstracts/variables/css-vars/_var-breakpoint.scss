@@ -1,8 +1,7 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-// CSS Variables
-$var-bp-xs: css.get(breakpoint, xs);
-$var-bp-mobile: css.get(breakpoint, mobile);
-$var-bp-tablet: css.get(breakpoint, tablet);
-$var-bp-desktop: css.get(breakpoint, desktop);
-$var-bp-wide: css.get(breakpoint, wide);
+$v-bp-xs: css.get(breakpoint, xs, css);
+$v-bp-mobile: css.get(breakpoint, mobile, css);
+$v-bp-tablet: css.get(breakpoint, tablet, css);
+$v-bp-desktop: css.get(breakpoint, desktop, css);
+$v-bp-wide: css.get(breakpoint, wide, css);

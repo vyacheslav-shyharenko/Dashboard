@@ -1,26 +1,23 @@
 @use "sass:math";
 @use "sass:meta";
 
-@use "../functions/f-get-token" as gt;
-
-@use "../variables" as v;
-
 @function remove-unit($value) {
   @if meta.type-of($value) != "number" {
-    @error "#{$value} is not a number.";
+    @error "remove-unit(): `#{$value}` is not a number.";
   }
 
-  @if not math.is-unitless($value) {
-    @return math.div($value, 1px);
+  @if math.is-unitless($value) {
+    @return $value;
   }
 
-  @return $value;
+  @if math.unit($value) != "px" {
+    @error "remove-unit(): `#{$value}` must use px units, not #{math.unit($value)}.";
+  }
+
+  @return math.div($value, 1px);
 }
 
-@function rem($px-value, $baseFontSize: null) {
-  @if $baseFontSize == null {
-    $baseFontSize: v.$fs-primary;
-  }
-
-  @return #{math.div(remove-unit($px-value), remove-unit($baseFontSize))}rem;
+@function rem($px-value, $baseFontSize: 16px) {
+  $ratio: math.div(remove-unit($px-value), remove-unit($baseFontSize));
+  @return $ratio * 1rem; // ← повертає число з одиницею rem
 }

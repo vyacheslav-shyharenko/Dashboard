@@ -1,44 +1,21 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-// TEXT CSS Variables
-$var-text-primary: css.get(color, text-primary);
-$var-text-secondary: css.get(color, text-secondary);
-$var-text-tertiary: css.get(color, text-tertiary);
-$var-text-accent: css.get(color, text-accent);
-$var-text-link: css.get(color, text-link);
-$var-text-link-hover: css.get(color, text-link-hover);
+$v-bg-primary: css.get(color, "bg.primary", css);
+$v-bg-secondary: css.get(color, "bg.secondary", css);
+$v-bg-tertiary: css.get(color, "bg.tertiary", css);
+$v-bg-overlay: css.get(color, "bg.overlay", css);
 
-// BACKGROUND CSS Variables
-$var-bg-primary: css.get(color, bg-primary);
-$var-bg-secondary: css.get(color, bg-secondary);
-$var-bg-tertiary: css.get(color, bg-tertiary);
-$var-bg-overlay: css.get(color, bg-overlay);
-$var-bg-hover: css.get(color, bg-hover);
+$v-text-primary: css.get(color, "text.primary", css);
+$v-text-title: css.get(color, "text.title", css);
+$v-text-accent: css.get(color, "text.accent", css);
 
-// BUTTON CSS Variables
-// Primary
-$var-button-bg-primary: css.get(color, button-bg-primary);
-$var-button-text-primary: css.get(color, button-text-primary);
-$var-button-hover-primary: css.get(color, button-hover-primary);
+$v-btn-text-primary: css.get(color, "button.text-primary", css);
+$v-btn-primary: css.get(color, "button.primary", css);
+$v-btn-default: css.get(color, "button.default", css);
+$v-btn-info: css.get(color, "button.info", css);
+$v-btn-success: css.get(color, "button.success", css);
+$v-btn-warning: css.get(color, "button.warning", css);
+$v-btn-danger: css.get(color, "button.danger", css);
 
-// Secondary
-$var-button-bg-secondary: css.get(color, button-bg-secondary);
-$var-button-text-secondary: css.get(color, button-text-secondary);
-$var-button-hover-secondary: css.get(color, button-hover-secondary);
-
-// Tertiary
-$var-button-bg-tertiary: css.get(color, button-bg-tertiary);
-$var-button-text-tertiary: css.get(color, button-text-tertiary);
-$var-button-hover-tertiary: css.get(color, button-hover-tertiary);
-
-// SVG CSS Variables
-
-// Fill
-$var-fill-primary: css.get(color, fill-primary);
-$var-fill-secondary: css.get(color, fill-secondary);
-$var-fill-tertiary: css.get(color, fill-tertiary);
-
-// Stroke
-$var-stroke-primary: css.get(color, stroke-primary);
-$var-stroke-secondary: css.get(color, stroke-secondary);
-$var-stroke-tertiary: css.get(color, stroke-tertiary);
+$v-svg-primary: css.get(color, "svg.primary", css);
+$v-svg-secondary: css.get(color, "svg.secondary", css);

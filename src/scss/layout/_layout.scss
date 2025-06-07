@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
 
 .layout {
-  min-width: $var-bp-mobile;
+  min-width: $v-bp-mobile;
 
-  @include respond-to(desktop) {
+  @include mq(desktop) {
     display: grid;
     grid-template-columns: rem(248px) 1fr;
     grid-template-rows: rem(68px) 1fr;

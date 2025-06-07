@@ -3,7 +3,7 @@
 .sidebar {
   grid-area: sidebar;
 
-  @include respond-to(desktop, max) {
+  @include mq(desktop, max) {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     opacity: 0;
     visibility: hidden;
 
-    background-color: rgba($bg-primary, 0.6);
+    background-color: $v-bg-overlay;
   }
 
   &.is-open {
@@ -25,12 +25,11 @@
 
   & .menu {
     position: relative;
-    box-shadow: inset -5px 0px 10px -6px rgb(131, 131, 131);
 
     height: 100%;
     background-color: $bg-secondary;
 
-    @include respond-to(desktop, max) {
+    @include mq(desktop, max) {
       max-width: rem(248px);
 
       background-color: $bg-primary;
@@ -41,9 +40,9 @@
     position: absolute;
     right: 0;
 
-    stroke: $stroke-primary;
+    stroke: $svg-primary;
 
-    @include respond-to(desktop) {
+    @include mq(desktop) {
       display: none;
     }
   }
@@ -62,15 +61,14 @@
     font-weight: $fw-bold;
     font-size: $fs-lg;
 
-    color: $var-text-accent;
-    box-shadow: inset 0px -5px 10px -6px rgb(131, 131, 131);
+    color: $v-text-accent;
   }
 
   & .menu-link {
     display: flex;
     padding: $sp-md $sp-lg;
     gap: $sp-lg;
-    color: $text-secondary;
+    color: $v-text-primary;
     transition: color 350ms ease-in-out;
 
     @include hover {

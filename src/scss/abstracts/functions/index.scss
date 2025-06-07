@@ -1,5 +1,5 @@
 @forward "./f-get-token"; // Повертає значення з вкладеної токен-мапи за послідовністю ключів.
 
-@forward "./f-get-var"; // Повертає CSS-змінну з групи токенів з підтримкою alias (color, font-size, font-weight, line-height spacing і т.д).
+@forward "./f-sanitaze";
 
 @forward "./f-units"; // Функції для роботи з одиницями: remove-unit, (px → rem) з підтримкою базового шрифту з токенів.

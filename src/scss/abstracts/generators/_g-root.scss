@@ -1,45 +1,46 @@
 @use "../functions/f-units" as r;
 
+@use "../mixins/mx-generate-vars" as mx;
+
 @use "../variables" as v;
 
 :root {
-  @each $key, $value in v.$bp-map {
+  @each $key, $value in v.$breakpoints {
     --breakpoint-#{$key}: #{$value};
   }
 
   /* === FONTS-FAMILY === */
 
-  @each $key, $value in v.$ff-map {
+  @each $key, $value in v.$font-families {
     --font-family-#{$key}: #{$value};
   }
 
   /* === FONT SIZES === */
-  @each $key, $value in v.$fs-map {
-    --font-size-#{$key}: #{r.rem($value)};
+  @each $key, $value in v.$font-sizes {
+    --font-size-#{$key}: #{$value};
   }
 
   /* === FONT WEIGHTS === */
-  @each $key, $value in v.$fw-map {
+  @each $key, $value in v.$font-weights {
     --font-weight-#{$key}: #{$value};
   }
 
   /* === LINE HEIGHTS === */
-  @each $key, $value in v.$lh-map {
+  @each $key, $value in v.$line-heights {
     --line-height-#{$key}: #{$value};
   }
 
   /* === SPACINGS === */
-  @each $key, $value in v.$sp-map {
-    --spacing-#{$key}: #{r.rem($value)};
+  @each $key, $value in v.$spacing {
+    --spacing-#{$key}: #{$value};
   }
 
   /* === RADIUS === */
-  @each $key, $value in v.$r-map {
-    --radius-#{$key}: #{r.rem($value)};
+  @each $key, $value in v.$radii {
+    --radius-#{$key}: #{$value};
   }
 
   /* === COLORS === */
-  @each $key, $value in v.$color-map {
-    --color-#{$key}: #{$value};
-  }
+
+  @include mx.generate-css-vars(v.$colors, "color");
 }

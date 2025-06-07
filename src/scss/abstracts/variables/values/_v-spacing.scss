@@ -1,15 +1,18 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$sp-map: tok.get-token(spacing);
+// Повна мапа spacing
+$spacing: token.get(spacing);
 
-$sp-none: tok.get-token(spacing, none);
-$sp-xxs: tok.get-token(spacing, xxs);
-$sp-xs: tok.get-token(spacing, xs);
-$sp-sm: tok.get-token(spacing, sm);
-$sp-md: tok.get-token(spacing, md);
-$sp-lg: tok.get-token(spacing, lg);
-$sp-xl: tok.get-token(spacing, xl);
-$sp-xxl: tok.get-token(spacing, xxl);
-$sp-section: tok.get-token(spacing, section);
-$sp-container-min: tok.get-token(spacing, container-min);
-$sp-container-max: tok.get-token(spacing, container-max);
+// Звичайні SCSS значення
+$sp-none: token.get(spacing, none);
+$sp-xxs: token.get(spacing, xxs);
+$sp-xs: token.get(spacing, xs);
+$sp-sm: token.get(spacing, sm);
+$sp-md: token.get(spacing, md);
+$sp-lg: token.get(spacing, lg);
+$sp-xl: token.get(spacing, xl);
+$sp-xxl: token.get(spacing, xxl);
+
+$sp-section: token.get(spacing, section);
+$sp-container-min: token.get(spacing, container-min);
+$sp-container-max: token.get(spacing, container-max);

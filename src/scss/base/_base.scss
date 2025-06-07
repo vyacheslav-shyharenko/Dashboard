@@ -1,16 +1,18 @@
 @use "../abstracts" as *;
 
 html {
-  font-size: $fs-primary;
+  font-size: $v-fs-base;
+  background-color: $v-bg-primary;
   scroll-behavior: smooth;
-  background-color: $bg-primary;
 }
 
-// Базові стилі для body
 body {
-  @include clamp($bp-xs, $bp-wide, $fs-primary, 16px);
-  font-family: $ff-primary, sans-serif;
-  color: $text-primary;
+  @include clamp($bp-xs, $bp-desktop, $fs-base, 14px);
+  font-family: $v-ff-primary, sans-serif;
+  font-weight: $v-fw-regular;
+  line-height: $v-lh-base;
+
+  color: $v-text-primary;
 
   & button {
     font-family: inherit;
@@ -23,6 +25,11 @@ body {
   }
 
   & svg {
-    fill: $fill-primary;
+    fill: $v-svg-primary;
+    transition: fill 1000ms ease-in-out;
+
+    @include hover {
+      fill: $v-svg-secondary;
+    }
   }
 }

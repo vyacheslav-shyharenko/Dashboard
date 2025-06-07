@@ -1,5 +1,5 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-$var-r-sm: css.get(radius, sm);
-$var-r-md: css.get(radius, md);
-$var-r-lg: css.get(radius, lg);
+$v-r-sm: css.get(radius, sm, css);
+$v-r-md: css.get(radius, md, css);
+$v-r-lg: css.get(radius, lg, css);

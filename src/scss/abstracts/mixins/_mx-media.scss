@@ -1,12 +1,9 @@
 @use "sass:map";
-@use "../tokens/t-tokens" as t;
-@use "../functions/f-get-token" as fn;
+@use "../variables/values" as v;
 
-$breakpoints: fn.get-token(breakpoint);
-
-@mixin respond-to($bp: sm, $type: min, $is-retina: false) {
-  @if map.has-key($breakpoints, $bp) {
-    $width: map.get($breakpoints, $bp);
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if map.has-key(v.$breakpoints, $bp) {
+    $width: map.get(v.$breakpoints, $bp);
 
     @if $type == max {
       $width: $width - 0.02px;

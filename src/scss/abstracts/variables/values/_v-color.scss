@@ -1,45 +1,26 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$color-map: tok.get-token(color);
+// Повна мапа кольорів
+$colors: token.get(color);
 
-// TEXT CSS Variables
-$text-primary: tok.get-token(color, text-primary);
-$text-secondary: tok.get-token(color, text-secondary);
-$text-tertiary: tok.get-token(color, text-tertiary);
-$text-link: tok.get-token(color, text-link);
-$text-link-hover: tok.get-token(color, text-link-hover);
+// Звичайні SCSS-значення
 
-// BACKGROUND CSS Variables
-$bg-primary: tok.get-token(color, bg-primary);
-$bg-secondary: tok.get-token(color, bg-secondary);
-$bg-tertiary: tok.get-token(color, bg-tertiary);
-$bg-overlay: tok.get-token(color, bg-overlay);
-$bg-hover: tok.get-token(color, bg-hover);
+$bg-primary: token.get(color, "bg.primary");
+$bg-secondary: token.get(color, "bg.secondary");
+$bg-tertiary: token.get(color, "bg.tertiary");
+$bg-overlay: token.get(color, "bg.overlay");
 
-// BUTTON CSS Variables
-// Primary
-$button-bg-primary: tok.get-token(color, button-bg-primary);
-$button-text-primary: tok.get-token(color, button-text-primary);
-$button-hover-primary: tok.get-token(color, button-hover-primary);
+$text-primary: token.get(color, "text.primary");
+$text-title: token.get(color, "text.title");
+$text-accent: token.get(color, "text.accent");
 
-// Secondary
-$button-bg-secondary: tok.get-token(color, button-bg-secondary);
-$button-text-secondary: tok.get-token(color, button-text-secondary);
-$button-hover-secondary: tok.get-token(color, button-hover-secondary);
+$btn-text-primary: token.get(color, "button.text-primary");
+$btn-primary: token.get(color, "button.primary");
+$btn-default: token.get(color, "button.default");
+$btn-info: token.get(color, "button.info");
+$btn-success: token.get(color, "button.success");
+$btn-warning: token.get(color, "button.warning");
+$btn-danger: token.get(color, "button.danger");
 
-// Tertiary
-$button-bg-tertiary: tok.get-token(color, button-bg-tertiary);
-$button-text-tertiary: tok.get-token(color, button-text-tertiary);
-$button-hover-tertiary: tok.get-token(color, button-hover-tertiary);
-
-// SVG CSS Variables
-
-// Fill
-$fill-primary: tok.get-token(color, fill-primary);
-$fill-secondary: tok.get-token(color, fill-secondary);
-$fill-tertiary: tok.get-token(color, fill-tertiary);
-
-// Stroke
-$stroke-primary: tok.get-token(color, stroke-primary);
-$stroke-secondary: tok.get-token(color, stroke-secondary);
-$stroke-tertiary: tok.get-token(color, stroke-tertiary);
+$svg-primary: token.get(color, "svg.primary");
+$svg-secondary: token.get(color, "svg.secondary");

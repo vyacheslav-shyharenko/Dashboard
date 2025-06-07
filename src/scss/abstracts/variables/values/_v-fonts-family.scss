@@ -1,7 +1,9 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$ff-map: tok.get-token(font-family);
+// Повна мапа font-family
+$font-families: token.get(font-family);
 
-$ff-primary: tok.get-token(font-family, primary);
-$ff-secondary: tok.get-token(font-family, secondary);
-$ff-accent: tok.get-token(font-family, accent);
+// Звичайні SCSS-значення
+$ff-primary: token.get(font-family, primary);
+$ff-secondary: token.get(font-family, secondary);
+$ff-accent: token.get(font-family, accent);

@@ -1,5 +1,5 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-$var-fw-regular: css.get(font-weight, regular);
-$var-fw-medium: css.get(font-weight, medium);
-$var-fw-bold: css.get(font-weight, bold);
+$v-fw-regular: css.get(font-weight, regular, css);
+$v-fw-medium: css.get(font-weight, medium, css);
+$v-fw-bold: css.get(font-weight, bold, css);

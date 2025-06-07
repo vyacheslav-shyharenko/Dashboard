@@ -2,38 +2,37 @@
 
 .header {
   grid-area: header;
-  display: flex;
-  align-items: center;
+
+  @include flex-y;
   padding: $sp-md;
 
-  @include respond-to(desktop) {
+  @include mq(desktop) {
     background-color: $bg-secondary;
-
-    box-shadow: inset 0px -5px 10px -6px rgb(131, 131, 131);
+    padding: $sp-lg;
   }
 
   & .menu-btn {
-    display: flex;
-    align-items: center;
+    @include flex-y;
+
     gap: $sp-md;
     margin-right: auto;
 
-    @include respond-to(desktop) {
+    @include mq(desktop) {
       display: none;
     }
   }
 
   & .search-input {
     width: 100%;
-    @include respond-to(desktop, max) {
+    @include mq(desktop, max) {
       display: none;
     }
   }
 
   & .search-field {
-    margin-right: 24px;
+    margin-right: $sp-md;
 
-    @include respond-to(desktop) {
+    @include mq(desktop) {
       width: 100%;
       display: flex;
       gap: $sp-sm + 2;

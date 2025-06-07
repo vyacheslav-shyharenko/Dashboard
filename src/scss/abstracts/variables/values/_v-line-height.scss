@@ -1,8 +1,10 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$lh-map: tok.get-token(line-height);
+// Повна мапа line-height
+$line-heights: token.get(line-height);
 
-$lh-tight: tok.get-token(line-height, tight);
-$lh-base: tok.get-token(line-height, base);
-$lh-relaxed: tok.get-token(line-height, relaxed);
-$lh-loose: tok.get-token(line-height, loose);
+// Звичайні SCSS значення
+$lh-tight: token.get(line-height, tight);
+$lh-base: token.get(line-height, base);
+$lh-relaxed: token.get(line-height, relaxed);
+$lh-loose: token.get(line-height, loose);

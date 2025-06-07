@@ -1,10 +1,11 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$bp-map: tok.get-token(breakpoint);
+// Повна мапа breakpoint
+$breakpoints: token.get(breakpoint);
 
-// Values
-$bp-xs: tok.get-token(breakpoint, xs);
-$bp-mobile: tok.get-token(breakpoint, mobile);
-$bp-tablet: tok.get-token(breakpoint, tablet);
-$bp-desktop: tok.get-token(breakpoint, desktop);
-$bp-wide: tok.get-token(breakpoint, wide);
+// Звичайні SCSS-значення
+$bp-xs: token.get(breakpoint, xs);
+$bp-mobile: token.get(breakpoint, mobile);
+$bp-tablet: token.get(breakpoint, tablet);
+$bp-desktop: token.get(breakpoint, desktop);
+$bp-wide: token.get(breakpoint, wide);

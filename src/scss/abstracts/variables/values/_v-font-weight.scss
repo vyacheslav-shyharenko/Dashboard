@@ -1,7 +1,9 @@
-@use "../../functions/f-get-token" as tok;
+@use "../../functions/f-get-token" as token;
 
-$fw-map: tok.get-token(font-weight);
+// Повна мапа font-weight
+$font-weights: token.get(font-weight);
 
-$fw-regular: tok.get-token(font-weight, regular);
-$fw-medium: tok.get-token(font-weight, medium);
-$fw-bold: tok.get-token(font-weight, bold);
+// Звичайні SCSS-значення
+$fw-regular: token.get(font-weight, regular);
+$fw-medium: token.get(font-weight, medium);
+$fw-bold: token.get(font-weight, bold);

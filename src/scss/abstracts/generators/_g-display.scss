@@ -1,8 +1,0 @@
-// Властивість display
-$display-values: none, inline, block, inline-block, flex, inline-flex, grid,
-  inline-grid;
-@each $value in $display-values {
-  .d-#{$value} {
-    display: $value;
-  }
-}

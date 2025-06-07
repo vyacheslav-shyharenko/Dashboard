@@ -1,13 +1,13 @@
-@use "../../functions/f-get-var" as css;
+@use "../../functions/f-get-token" as css;
 
-$var-sp-none: css.get(spacing, none);
-$var-sp-xxs: css.get(spacing, xxs);
-$var-sp-xs: css.get(spacing, xs);
-$var-sp-sm: css.get(spacing, sm);
-$var-sp-md: css.get(spacing, md);
-$var-sp-lg: css.get(spacing, lg);
-$var-sp-xl: css.get(spacing, xl);
-$var-sp-xxl: css.get(spacing, xxl);
-$var-sp-section: css.get(spacing, section);
-$var-sp-container-min: css.get(spacing, container-min);
-$var-sp-container-max: css.get(spacing, container-max);
+$v-sp-none: css.get(spacing, none, css);
+$v-sp-xxs: css.get(spacing, xxs, css);
+$v-sp-xs: css.get(spacing, xs, css);
+$v-sp-sm: css.get(spacing, sm, css);
+$v-sp-md: css.get(spacing, md, css);
+$v-sp-lg: css.get(spacing, lg, css);
+$v-sp-xl: css.get(spacing, xl, css);
+$v-sp-xxl: css.get(spacing, xxl, css);
+$v-sp-section: css.get(spacing, section, css);
+$v-sp-container-min: css.get(spacing, container-min, css);
+$v-sp-container-max: css.get(spacing, container-max, css);

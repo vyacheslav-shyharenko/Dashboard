@@ -2,7 +2,7 @@
 
 @use "../functions/f-get-token" as fn;
 
-$map: fn.get-token(font-weight);
+$map: fn.get(font-weight);
 
 // Fonts
 @mixin font-face-family($name, $map, $style: normal) {
