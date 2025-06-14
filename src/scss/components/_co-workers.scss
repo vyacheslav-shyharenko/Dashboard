@@ -1,5 +1,14 @@
 @use "../abstracts" as *;
 
+// .co-workers {
+//   & img {
+//     border-radius: 50%;
+//     object-fit: cover;
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
 .co-workers {
   grid-area: co-workers;
 
@@ -9,29 +18,45 @@
     padding: 16px;
   }
 
+  & .co-workers-title {
+    margin-bottom: $sp-xl;
+  }
+
+  & .co-workers-container {
+    @include flex-col-x(16px);
+  }
+
+  & .co-workers-details {
+    display: grid;
+  }
+
   & .co-workers-data {
-    display: flex;
-    align-items: center;
+    @include flex-y(12px);
+  }
+
+  & .co-workers-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & .success {
+    fill: $v-svg-success;
+  }
+  & .error {
+    fill: $v-svg-error;
   }
 }
 
-.co-workers-wrapper {
-}
-.co-workers-title {
-}
-.co-workers-container {
-}
-.co-workers-details {
-}
-.co-workers-data {
-}
 .co-workers-icon {
 }
 .plus {
 }
 .minus {
+  display: none;
 }
 .co-workers-bio {
+  @include flex-y(12px);
+  margin-right: auto;
 }
 .thumb {
 }
@@ -54,6 +79,7 @@
 .co-workers-accept {
 }
 .co-workers-table {
+  display: none;
 }
 .visually-hidden {
 }

@@ -61,6 +61,8 @@
   --color-button-text-primary: #fafafb;
   --color-svg-primary: #92929d;
   --color-svg-secondary: #ffffff;
+  --color-svg-success: #82c43c;
+  --color-svg-error: #fc5a5a;
 }
 
 .visually-hidden {
@@ -429,9 +431,10 @@ body svg:hover {
 
 .welcome {
   grid-area: welcome;
-}
-.welcome .page-title {
-  margin-bottom: var(--spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 .welcome .page-title-accent {
   font-size: var(--font-size-md);
@@ -460,9 +463,47 @@ body svg:hover {
   border-radius: 12px;
   padding: 16px;
 }
+.co-workers .co-workers-title {
+  margin-bottom: 2rem;
+}
+.co-workers .co-workers-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.co-workers .co-workers-details {
+  display: grid;
+}
 .co-workers .co-workers-data {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+.co-workers .co-workers-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.co-workers .success {
+  fill: var(--color-svg-success);
+}
+.co-workers .error {
+  fill: var(--color-svg-error);
+}
+
+.minus {
+  display: none;
+}
+
+.co-workers-bio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-right: auto;
+}
+
+.co-workers-table {
+  display: none;
 }
 
 .tasks {

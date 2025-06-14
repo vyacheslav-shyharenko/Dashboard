@@ -11,6 +11,8 @@ $v-text-accent: css.get(color, "text.accent", css);
 
 $v-btn-text-primary: css.get(color, "button.text-primary", css);
 $v-btn-primary: css.get(color, "button.primary", css);
+$v-btn-pressed: css.get(color, "button.pressed", css);
+
 $v-btn-default: css.get(color, "button.default", css);
 $v-btn-info: css.get(color, "button.info", css);
 $v-btn-success: css.get(color, "button.success", css);
@@ -19,3 +21,5 @@ $v-btn-danger: css.get(color, "button.danger", css);
 
 $v-svg-primary: css.get(color, "svg.primary", css);
 $v-svg-secondary: css.get(color, "svg.secondary", css);
+$v-svg-success: css.get(color, "svg.success", css);
+$v-svg-error: css.get(color, "svg.error", css);

@@ -72,10 +72,10 @@
     transition: color 350ms ease-in-out;
 
     @include hover {
-      color: $text-primary;
+      color: $v-text-title;
 
       & .menu-icon {
-        fill: $text-primary;
+        fill: $v-svg-secondary;
       }
     }
   }

@@ -3,9 +3,11 @@
 .welcome {
   grid-area: welcome;
 
-  & .page-title {
-    margin-bottom: $v-sp-md;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $v-sp-md;
 
   & .page-title-accent {
     font-size: $v-fs-md;
@@ -15,12 +17,20 @@
   }
 
   & .welcome-btn {
-    @include flex-y(8px);
-
     border-radius: $v-r-lg;
     padding: $v-sp-sm $v-sp-md;
     color: $v-btn-text-primary;
     background-color: $v-btn-primary;
+    transition: transform 250ms ease-in-out;
+
+    @include flex-y(8px);
+    @include hover {
+      transform: scale(0.9);
+    }
+
+    @include pressed {
+      background-color: $v-btn-pressed;
+    }
 
     & .btn-icon {
       fill: $v-svg-secondary;

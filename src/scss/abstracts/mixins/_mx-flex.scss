@@ -48,6 +48,14 @@
   @include flex(center, center, column, null, $gap);
 }
 
+@mixin flex-col-x($gap: null) {
+  @include flex(center, null, column, null, $gap);
+}
+
+@mixin flex-col-y($gap: null) {
+  @include flex(null, center, column, null, $gap);
+}
+
 @mixin flex-between($gap: null) {
   @include flex(space-between, center, null, null, $gap);
 }

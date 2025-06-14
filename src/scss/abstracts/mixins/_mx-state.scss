@@ -16,6 +16,12 @@
   }
 }
 
+@mixin pressed {
+  &:active {
+    @content;
+  }
+}
+
 @mixin hover-focus {
   &:hover,
   &:focus {
